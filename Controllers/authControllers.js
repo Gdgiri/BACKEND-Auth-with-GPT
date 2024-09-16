@@ -86,7 +86,7 @@ export const forgotPassword = async (req, res) => {
     await user.save();
 
     // Send email with reset link
-    const resetUrl = `${process.env.CLIENT_URL}/reset-password/${resetToken}`;
+    const resetUrl = `https://gpt-auth.netlify.app/reset-password/${resetToken}`;
     const message = `You requested a password reset. Click on the following link to reset your password: ${resetUrl}`;
 
     try {
